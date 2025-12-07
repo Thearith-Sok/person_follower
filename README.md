@@ -46,6 +46,7 @@ dataset/VOC2007/
  ├── ImageSets/Main/train.txt
  ├── ImageSets/Main/val.txt
  ├── ImageSets/Main/test.txt
+ ├── ImageSets/Main/trainval.txt
 
 ## Training the Model
 Recommended Training Command:
@@ -103,16 +104,7 @@ elif x_center > right_threshold:
     turn_right()
 else:
     move_forward()
-
-## Screenshots (Add Later)
-![Training Curve](images/training.png)
-![Inference Example](images/inference.png)
-![Robot Following](images/robot_demo.png)
-
-## Demo Video
-Add your video link:
-https://youtu.be/your_video_here
-
+    
 ## References
 - PyTorch SSD repository: https://github.com/qfgaohao/pytorch-ssd
 - MobileNet-SSD research paper
