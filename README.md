@@ -1,7 +1,10 @@
 # Person_Follower_Robot
 
 ## Models to download: 
-- https://drive.google.com/drive/folders/17MSviLBLsBMN5Wo9jXc0iX2BPkxaZm_5?usp=drive_link
+- Google Drive Link: https://drive.google.com/drive/folders/17MSviLBLsBMN5Wo9jXc0iX2BPkxaZm_5?usp=drive_link
+
+## Dataset to download:
+- Dataset Link: https://app.roboflow.com/ds/xjijjOCjU4?key=LaxGN0HYTQ
   
 ## Features
 - Train a MobileNet-SSD model to detect persons from a custom dataset.
