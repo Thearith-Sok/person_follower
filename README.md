@@ -1,5 +1,8 @@
 # Person_Follower_Robot
 
+## Person Follower Code
+- Inside the person_follow folder is all the files used for the robot logic
+
 ## Models to download: 
 - Google Drive Link: https://drive.google.com/drive/folders/17MSviLBLsBMN5Wo9jXc0iX2BPkxaZm_5?usp=drive_link
 
