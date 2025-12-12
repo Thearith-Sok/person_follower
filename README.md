@@ -3,6 +3,22 @@
 ## Person Follower Code
 - Inside the person_follow folder is all the files used for the robot logic
 
+## Training
+- These 2: run_ssd_live_demo.py(camera test), train_ssd.py(training model) are files you can find after cloning the repo below. After cloning, these files will be included in the pytorch-ssd folder. To run these files please make sure to download the model included in the google drive first. For this person following robot the models used is: mb1-ssd-Epoch-25-Loss-4.4421718915303545.pth. It's also important to note that dataset will need to be in this structure:
+Directory Structure:
+dataset/VOC2007/
+ ├── Annotations/
+ ├── JPEGImages/
+ ├── ImageSets/Main/train.txt
+ ├── ImageSets/Main/val.txt
+ ├── ImageSets/Main/test.txt
+ ├── ImageSets/Main/trainval.txt
+
+# Commands
+- Train: thon train_ssd.py --dataset_type voc --datasets dataset/VOC2007 --validation_dataset dataset/VOC2007 --net mb1-ssd --pretrained_ssd models/mobilenet-v1-ssd-mp-0_675.pth --batch_size 4 --max_epoch 30 --scheduler cosine --lr 0.001 --num_workers 0 --freeze_base_net
+- Camera Test: python run_ssd_live_demo.py mb1-ssd models/mb1-ssd-Epoch-25-Loss-4.4421718915303545.pth models/voc-model-labels.txt
+- Onnx Conversion: python conver_to_onnx.py models/mb1-ssd-Epoch-25-Loss.pth models/voc-model-labels.txt --onnx models/person_follower.onnx
+
 ## Models to download: 
 - Google Drive Link: https://drive.google.com/drive/folders/17MSviLBLsBMN5Wo9jXc0iX2BPkxaZm_5?usp=drive_link
 
@@ -48,16 +64,7 @@ Classes:
 - person
 (Note: VOC contains additional classes but they are unused)
 
-Directory Structure:
-dataset/VOC2007/
- ├── Annotations/
- ├── JPEGImages/
- ├── ImageSets/Main/train.txt
- ├── ImageSets/Main/val.txt
- ├── ImageSets/Main/test.txt
- ├── ImageSets/Main/trainval.txt
-
-## Training the Model
+## Training the Model Recommendation
 Recommended Training Command:
 python train_ssd.py --dataset_type voc --datasets dataset/VOC2007 \
 --validation_dataset dataset/VOC2007 \
