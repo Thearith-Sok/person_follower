@@ -3,7 +3,7 @@
 ## Person Follower Code
 - Inside the person_follow folder is all the files used for the robot logic
 
-## Training
+## Important Notes
 - These 2: run_ssd_live_demo.py(camera test), train_ssd.py(training model) are files you can find after cloning the repo below. After cloning, these files will be included in the pytorch-ssd folder. To run these files please make sure to download the model included in the google drive first. For this person following robot the models used is: mb1-ssd-Epoch-25-Loss-4.4421718915303545.pth. It's also important to note that dataset will need to be in this structure:
 Directory Structure:
 dataset/VOC2007/
