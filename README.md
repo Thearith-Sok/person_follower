@@ -85,10 +85,6 @@ models/voc-model-labels.txt \
 Output File:
 models/person_follower.onnx
 
-## Testing the ONNX Model
-Command:
-python test_onnx.py
-
 The test script will:
 - Load the ONNX model
 - Preprocess the input image
